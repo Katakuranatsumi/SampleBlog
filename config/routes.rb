@@ -3,4 +3,7 @@ Rails.application.routes.draw do
     
   resources :posts
     
+#  サーバーを立ち上げた最初の画面をindexにする処理
+  root 'posts#index'    
+    
 end
