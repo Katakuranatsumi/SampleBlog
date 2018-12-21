@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     
   resources :posts do
-     resources :comments    
+     resources :comments, only: [:create, :destroy] 
   end    
 #  サーバーを立ち上げた最初の画面をindexにする処理
   root 'posts#index'    
